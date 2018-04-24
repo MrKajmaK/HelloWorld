@@ -1,16 +1,45 @@
 backend:
   name: git-gateway
 media_folder: "assets/img/uploads"
+publish_mode: editorial_workflow
 collections:
   - name: "days"
     label: "Dni"
-    folder: "_posts/days" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
-      - {label: "Body", name: "body", widget: "markdown"}
+    label_singular: "Dzień"
+    folder: "_posts/days"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "day"}
+      - {label: "Tytuł", name: "title", widget: "string"}
+      - {label: "Data publikacji", name: "date", widget: "datetime"}
+      - {label: "Obrazek wyróżniający", name: "thumbnail", widget: "image"}
+      - label: "Miasto"
+        name: "city"
+        widget: "relation"
+        collection: "cities"
+        searchFields: ["name"]
+        valueField: "name"
+      - {label: "Treść", name: "body", widget: "markdown"}
+  - name: "cities"
+    label: "Miasta"
+    label_singular: "Miasto"
+    folder: "_posts/cities"
+    create: true
+    slug: "{{year}}-{{month}}-{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "city"}
+      - {label: "Nazwa", name: "name", widget: "string"}
+      - label: "Kontynent"
+        name: "continent"
+        widget: "select"
+        options:
+          - {label: "Europa", value: "europe"}
+          - {label: "Azja", value: "asia"}
+          - {label: "Afryka", value: "africa"}
+          - {label: "Ameryka Południowa", value: "southam"}
+          - {label: "Ameryka Północna", value: "northam"}
+          - {label: "Antarktyda", value: "antarctica"}
+          - {label: "Australia", value: "australia"}
+      - {label: "Kraj", name: "country", widget: "string"}
+      - {label: "Obrazek wyróżniający", name: "thumbnail", widget: "image"}
