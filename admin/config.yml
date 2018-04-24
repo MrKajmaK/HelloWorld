@@ -18,8 +18,8 @@ collections:
         name: "city"
         widget: "relation"
         collection: "cities"
-        searchFields: ["name"]
-        valueField: "name"
+        searchFields: ["title"]
+        valueField: "title"
       - {label: "Treść", name: "body", widget: "markdown"}
   - name: "cities"
     label: "Miasta"
@@ -29,7 +29,7 @@ collections:
     slug: "{{year}}-{{month}}-{{slug}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "city"}
-      - {label: "Nazwa", name: "name", widget: "string"}
+      - {label: "Nazwa", name: "title", widget: "string"}
       - label: "Kontynent"
         name: "continent"
         widget: "select"
