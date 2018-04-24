@@ -13,7 +13,7 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "day"}
       - {label: "Tytuł", name: "title", widget: "string"}
       - {label: "Data publikacji", name: "date", widget: "datetime"}
-      - {label: "Obrazek wyróżniający", name: "thumbnail", widget: "image"}
+      - {label: "Obrazek wyróżniający", name: "thumbnail", widget: "image", required: false}
       - label: "Miasto"
         name: "city"
         widget: "relation"
@@ -42,4 +42,4 @@ collections:
           - {label: "Antarktyda", value: "antarctica"}
           - {label: "Australia", value: "australia"}
       - {label: "Kraj", name: "country", widget: "string"}
-      - {label: "Obrazek wyróżniający", name: "thumbnail", widget: "image"}
+      - {label: "Obrazek wyróżniający", name: "thumbnail", widget: "image", required: false}
