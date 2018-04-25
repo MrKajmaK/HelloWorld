@@ -14,22 +14,23 @@ collections:
       - {label: "Tytuł", name: "title", widget: "string"}
       - {label: "Data publikacji", name: "date", widget: "datetime"}
       - {label: "Obrazek wyróżniający", name: "thumbnail", widget: "image", required: false}
-      - label: "Miasto"
-        name: "city"
+      - label: "Kraj"
+        name: "country"
         widget: "relation"
-        collection: "cities"
-        searchFields: ["title"]
+        collection: "countries"
+        searchFields: ["title", "code"]
         valueField: "title"
       - {label: "Treść", name: "body", widget: "markdown"}
-  - name: "cities"
-    label: "Miasta"
-    label_singular: "Miasto"
-    folder: "_posts/cities"
+  - name: "countries"
+    label: "Kraje"
+    label_singular: "Kraj"
+    folder: "_posts/countries"
     create: true
     slug: "{{year}}-{{month}}-{{slug}}"
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "city"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "country"}
       - {label: "Nazwa", name: "title", widget: "string"}
+      - {label: "Kod kraju", name: "code", widget: "string"}
       - label: "Kontynent"
         name: "continent"
         widget: "select"
@@ -41,5 +42,4 @@ collections:
           - {label: "Ameryka Północna", value: "northam"}
           - {label: "Antarktyda", value: "antarctica"}
           - {label: "Australia", value: "australia"}
-      - {label: "Kraj", name: "country", widget: "string"}
       - {label: "Obrazek wyróżniający", name: "thumbnail", widget: "image", required: false}
