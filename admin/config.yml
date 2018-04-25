@@ -8,7 +8,7 @@ collections:
     label_singular: "Dzień"
     folder: "_posts/days"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "day-{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Tytuł", name: "title", widget: "string"}
@@ -19,7 +19,7 @@ collections:
         widget: "relation"
         collection: "countries"
         searchFields: ["title", "code"]
-        valueField: "code"
+        valueField: "title"
       - {label: "Tagi", name: "tags", widget: "list"}
       - {label: "Treść", name: "body", widget: "markdown"}
   - name: "countries"
