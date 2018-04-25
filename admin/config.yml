@@ -44,3 +44,16 @@ collections:
           - {label: "Antarktyda", value: "antarctica"}
           - {label: "Australia", value: "australia"}
       - {label: "Obrazek wyróżniający", name: "featured-img", widget: "image", required: false}
+  - name: "posts"
+    label: "Posty"
+    label_singular: "Post"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Tytuł", name: "title", widget: "string"}
+      - {label: "Data publikacji", name: "date", widget: "datetime"}
+      - {label: "Obrazek wyróżniający", name: "featured-img", widget: "image", required: false}
+      - {label: "Tagi", name: "tags", widget: "list"}
+      - {label: "Treść", name: "body", widget: "markdown"}
