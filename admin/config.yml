@@ -19,7 +19,8 @@ collections:
         widget: "relation"
         collection: "countries"
         searchFields: ["title", "code"]
-        valueField: "title"
+        valueField: "code"
+      - {label: "Tagi", name: "tags", widget: "list"}
       - {label: "Treść", name: "body", widget: "markdown"}
   - name: "countries"
     label: "Kraje"
