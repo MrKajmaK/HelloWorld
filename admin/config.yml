@@ -10,7 +10,7 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "day"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Tytuł", name: "title", widget: "string"}
       - {label: "Data publikacji", name: "date", widget: "datetime"}
       - {label: "Obrazek wyróżniający", name: "featured-img", widget: "image", required: false}
