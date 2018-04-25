@@ -1,4 +1,5 @@
 title: Hello World # your site title
+subtitle: Blog podróżniczy by 16
 author: Stanisław Kowański
 email: helloworld@f4dev.me # email for form submission, you also have to change it in _js/scripts.js
 description: > # this means to ignore newlines until "baseurl:"
