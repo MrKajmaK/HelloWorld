@@ -13,7 +13,7 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "day"}
       - {label: "Tytuł", name: "title", widget: "string"}
       - {label: "Data publikacji", name: "date", widget: "datetime"}
-      - {label: "Obrazek wyróżniający", name: "thumbnail", widget: "image", required: false}
+      - {label: "Obrazek wyróżniający", name: "featured-img", widget: "image", required: false}
       - label: "Kraj"
         name: "country"
         widget: "relation"
@@ -43,4 +43,4 @@ collections:
           - {label: "Ameryka Północna", value: "northam"}
           - {label: "Antarktyda", value: "antarctica"}
           - {label: "Australia", value: "australia"}
-      - {label: "Obrazek wyróżniający", name: "thumbnail", widget: "image", required: false}
+      - {label: "Obrazek wyróżniający", name: "featured-img", widget: "image", required: false}
